@@ -5,77 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dolç y Salat - Reservas</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
     body {
-      background-color: #f8f9fa;
-      color: #333;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
-      padding: 20px 10px;
+      justify-content: center;
+      min-height: 90vh;
     }
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .header h1 {
-      color: #c82333; /* Rojo corporativo */
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
-    .header p {
-      color: #6c757d;
-      font-size: 1rem;
-    }
-    .card-container {
-      background: #ffffff;
-      width: 100%;
-      max-width: 600px;
+    .card {
+      background: white;
+      padding: 40px 30px;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      overflow: hidden;
-      padding: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 420px;
+      width: 100%;
     }
-    <iframe 
-  src="https://www.appsheet.com/embed/0397e665-a499-4661-81df-c68ea9952c2b" 
-  title="Dolç y Salat Reservas"
-  width="100%" 
-  height="750px" 
-  style="border:none; border-radius:12px;">
-</iframe>
+    h1 {
+      color: #c0392b;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+    p {
+      color: #555;
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .btn {
+      display: block;
+      background-color: #c0392b;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+    .btn:hover {
+      background-color: #a93226;
+    }
+    .btn:active {
+      transform: scale(0.98);
     }
     .footer {
-      margin-top: 25px;
-      text-align: center;
-      font-size: 0.85rem;
+      margin-top: 30px;
+      font-size: 13px;
       color: #888;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
+  <div class="card">
     <h1>Dolç y Salat</h1>
-    <p>Reserva tu mesa en línea</p>
-  </div>
+    <p>Haz tu reserva en línea en pocos segundos. Selecciona la fecha, hora y número de personas.</p>
+    
+    <a class="btn" href="https://www.appsheet.com/start/0397e665-a499-4661-81df-c68ea9952c2b" target="_blank" rel="noopener">
+      Reservar Mesa
+    </a>
 
-  <div class="card-container">
-    <iframe 
-      src="https://www.appsheet.com/start/0397e665-a499-4661-81df-c68ea9952c2b" 
-      title="Dolç y Salat Reservas"
-      allow="geolocation">
-    </iframe>
-  </div>
-
-  <div class="footer">
-    <p>© Dolç y Salat — Horario de servicio: 10:00 a 00:00</p>
+    <div class="footer">
+      © Dolç y Salat — Horario de atención: 10:00 a 00:00
+    </div>
   </div>
 
 </body>
