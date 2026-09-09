@@ -5,69 +5,135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dolç y Salat - Reservas</title>
   <style>
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background-color: #f4f6f8;
+    :root {
+      --primary: #c0392b;
+      --primary-hover: #a93226;
+      --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      --card-bg: #ffffff;
+      --text-dark: #2c3e50;
+      --text-muted: #6c757d;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-dark);
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 48px 36px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 6px 12px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    .brand-icon {
+      width: 72px;
+      height: 72px;
+      background-color: #fbeee8;
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 90vh;
+      margin: 0 auto 24px auto;
+      font-size: 32px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.04);
     }
-    .card {
-      background: white;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      text-align: center;
-      max-width: 420px;
-      width: 100%;
-    }
+
     h1 {
-      color: #c0392b;
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 30px;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
     }
+
     p {
-      color: #555;
-      margin-bottom: 28px;
-      font-size: 16px;
-      line-height: 1.5;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 32px;
     }
+
     .btn {
-      display: block;
-      background-color: #c0392b;
-      color: white;
-      padding: 16px 24px;
-      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 18px 28px;
+      border-radius: 14px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 18px;
-      transition: background-color 0.2s;
+      box-shadow: 0 8px 20px rgba(192, 57, 43, 0.28);
+      transition: all 0.25s ease;
     }
+
     .btn:hover {
-      background-color: #a93226;
+      background-color: var(--primary-hover);
+      box-shadow: 0 12px 24px rgba(192, 57, 43, 0.38);
+      transform: translateY(-2px);
     }
+
+    .btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 12px rgba(192, 57, 43, 0.2);
+    }
+
+    .btn svg {
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover svg {
+      transform: translateX(4px);
+    }
+
     .footer {
-      margin-top: 30px;
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid #f1f3f5;
       font-size: 13px;
-      color: #888;
-      border-top: 1px solid #eee;
-      padding-top: 15px;
+      font-weight: 500;
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
 
   <div class="card">
+    <div class="brand-icon">🍽️</div>
     <h1>Dolç y Salat</h1>
-    <p>Haz tu reserva en línea en pocos segundos. Selecciona la fecha, hora y número de personas.</p>
+    <p>Haz tu reserva de mesa en línea en pocos segundos. Selecciona la fecha, hora y número de personas.</p>
     
     <a class="btn" href="https://www.appsheet.com/start/0397e665-a499-4661-81df-c68ea9952c2b" target="_blank" rel="noopener">
-      Reservar Mesa
+      <span>Reservar Mesa</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
     </a>
 
     <div class="footer">
