@@ -3,91 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dolç y Salat - Reservas</title>
+  <title>Reservas - Dolç y Salat</title>
   <style>
     :root {
-      --primary: #c0392b;
-      --primary-hover: #a93226;
-      --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      --card-bg: #ffffff;
-      --text-dark: #2c3e50;
-      --text-muted: #6c757d;
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #e11d48;
+      --primary-hover: #be123c;
+      --accent: #fbbf24;
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg-gradient);
-      color: var(--text-dark);
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       padding: 20px;
     }
 
     .card {
-      background: var(--card-bg);
-      border-radius: 24px;
-      padding: 48px 36px;
-      max-width: 440px;
+      background-color: var(--card-bg);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 420px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .brand-icon {
-      width: 72px;
-      height: 72px;
-      background-color: #fbeee8;
-      color: var(--primary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px auto;
-      font-size: 32px;
-    }
-
-    h1 {
-      font-size: 32px;
+    .brand-title {
+      font-size: 2rem;
       font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 12px;
+      color: var(--accent);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
 
-    p {
-      font-size: 15px;
-      line-height: 1.6;
+    .subtitle {
+      font-size: 1.1rem;
       color: var(--text-muted);
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
 
     .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
+      display: inline-block;
+      width: 100%;
+      padding: 16px 24px;
       background-color: var(--primary);
       color: #ffffff;
-      padding: 18px 28px;
-      border-radius: 14px;
-      text-decoration: none;
+      font-size: 1.1rem;
       font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 8px 20px rgba(192, 57, 43, 0.28);
+      text-decoration: none;
+      border-radius: 12px;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 10px 15px -3px rgba(225, 29, 72, 0.4);
     }
 
-    .footer {
-      margin-top: 36px;
-      padding-top: 20px;
-      border-top: 1px solid #f1f3f5;
-      font-size: 13px;
+    .btn:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 20px -3px rgba(225, 29, 72, 0.6);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .footer-note {
+      margin-top: 25px;
+      font-size: 0.85rem;
       color: var(--text-muted);
     }
   </style>
@@ -95,17 +91,14 @@
 <body>
 
   <div class="card">
-    <div class="brand-icon">🍽️</div>
-    <h1>Dolç y Salat</h1>
-    <p>Haz tu reserva de mesa en línea en pocos segundos. Selecciona la fecha, hora y número de personas.</p>
+    <h1 class="brand-title">Dolç y Salat</h1>
+    <p class="subtitle">Gestión de Reservas y Citas</p>
     
-    <a class="btn" href="https://www.appsheet.com/start/0397e665-a499-4661-81df-c68ea9952c2b#appName=DolcySalayReservas-981535271&page=form&table=Dol%C3%A7%20y%20Salat%20-%20Reservas%20y%20Citas" target="_self">
-      <span>Reservar Mesa</span>
+    <a class="btn" href="https://www.appsheet.com/start/0397e665-a499-4661-81df-c68ea9952c2b?platform=mobile#appName=DolcySalayReservas-981535271&page=form&table=Dol%C3%A7%20y%20Salat%20-%20Reservas%20y%20Citas" target="_self">
+      Reservar Mesa
     </a>
 
-    <div class="footer">
-      © Dolç y Salat — Horario de servicio: 10:00 a 23:00
-    </div>
+    <p class="footer-note">Confirmación instantánea de tu mesa</p>
   </div>
 
 </body>
